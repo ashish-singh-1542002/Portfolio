@@ -6,7 +6,7 @@ import navIcon2 from '../assets/img/nav-icon-2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
 
-export const NavBar = () => {
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -57,3 +57,4 @@ export const NavBar = () => {
     </Navbar>
   );
 };
+export default NavBar;
