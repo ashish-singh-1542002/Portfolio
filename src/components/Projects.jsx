@@ -8,25 +8,25 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 const Projects = () => {
-
   const projects = [
     {
       title: "Real-Time-Code-Editor",
-      description: "Real-Time-Code-Editor enables user to see each other's codes and make changes instantly, ensuring\n synchronized updates and improved teamwork.",
+      description: "Real-Time-Code-Editor enables users to see each other's code and make changes instantly, ensuring synchronized updates and improved teamwork.",
       imgUrl: projImg1,
       link: "https://realtime-code-editor-roan.vercel.app/"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Whatsapp Chat Analyzer",
+      description: "Developed a data visualization tool in Python using Plotly and Altair charts to illustrate trends in WhatsApp chat data.",
       imgUrl: projImg2,
+      link: "https://threappdgit-cc5eu3ft8ydufveurlrkfh.streamlit.app/"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "SMS/Email Spam Detector",
+      description: "Developed a Streamlit-based spam detection app using NLTK and machine learning models with 98% accuracy.",
       imgUrl: projImg3,
-    },
-    
+      link: "https://v4z2s4nt74l8eywm9kvwkm.streamlit.app/"
+    }
   ];
 
   return (
@@ -36,51 +36,50 @@ const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Here are some of the demo projects I’ve created, showcasing my skills in web development, AI, and machine learning. Each project reflects my passion for innovation and problem-solving. Feel free to explore them and see my work in action. I’d love to hear your feedback!</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p></p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h2>Projects</h2>
+                  <p>Here are some of the demo projects I’ve created, showcasing my skills in web development, AI, and machine learning. Feel free to explore them and see my work in action.</p>
+
+                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                      <Nav.Item>
+                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                      <Tab.Pane eventKey="first">
+                        <Row>
+                          {projects.map((project, index) => (
+                            <ProjectCard key={index} {...project} />
+                          ))}
+                        </Row>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey="second">
+                        <p></p>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey="third">
+                        <p></p>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="background" />
     </section>
-  )
-}
+  );
+};
+
 export default Projects;

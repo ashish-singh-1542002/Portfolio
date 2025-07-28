@@ -60,7 +60,7 @@ const Skills = () => {
                                 <SkillCircle skill="NodeJS" value={70} />
                                 <SkillCircle skill="ExpressJS" value={65} />
                                 <SkillCircle skill="MongoDB" value={60} />
-                                <SkillCircle skill="Machine Learning" value={10} />
+                                <SkillCircle skill="Machine Learning" value={70} />
                             </Carousel>  
                         </div>
                     </Col>
