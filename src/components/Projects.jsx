@@ -38,19 +38,18 @@ const Projects = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Projects</h2>
-                  <p>Here are some of the demo projects I’ve created, showcasing my skills in web development, AI, and machine learning. Each project reflects my passion for innovation and problem-solving. Feel free to explore them and see my work in action.</p>
+                  <p>Here are some of the demo projects I’ve created, showcasing my skills in web development, AI, and machine learning. Feel free to explore them and see my work in action.</p>
 
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">All Projects</Nav.Link>
-                      </Nav.Item>
-                      {/* You can remove the below two if not needed */}
-                      <Nav.Item>
-                        <Nav.Link eventKey="second">Coming Soon</Nav.Link>
+                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">More</Nav.Link>
+                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
                       </Nav.Item>
                     </Nav>
 
@@ -64,11 +63,11 @@ const Projects = () => {
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="second">
-                        <p>More projects coming soon...</p>
+                        <p></p>
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="third">
-                        <p>Stay tuned for additional features and apps.</p>
+                        <p></p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
