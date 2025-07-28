@@ -17,14 +17,16 @@ const Projects = () => {
       link: "https://realtime-code-editor-roan.vercel.app/"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Whatsapp Chat Analyzer",
+      description: "Developed a data visualization tool in Python using Plotly and Altair charts to illustrate trends in WhatsApp chat data.",
       imgUrl: projImg2,
+      link: "https://threappdgit-cc5eu3ft8ydufveurlrkfh.streamlit.app/"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "SMS/EmailSpam Detector",
+      description: "Developed a Streamlit-based spam detection app using NLTK and machine learning models with 98% accuracy.",
       imgUrl: projImg3,
+      link: "https://v4z2s4nt74l8eywm9kvwkm.streamlit.app/"
     },
     
   ];
